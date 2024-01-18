@@ -1,0 +1,362 @@
+*{
+     box-sizing: border-box;
+     font-size: unset;
+     font-weight: unset;
+     font-family: unset;
+}
+
+@font-face {
+     font-family: bauhaus;
+     src: url(font/BauhausRegular.ttf) form ('embedded-opentype');
+     src: url(font/bauhausregular-webfont.woff2) format('woff2'),
+     url(font/bauhausregular-webfont.woff) format('woff'),
+     url(font/BauhausRegular.ttf) format('truetype');
+   }
+
+body{
+     margin: 0;
+     background-color: rgb(221, 94, 94);
+     font-family: bauhaus, sans-serif;
+     color: white;
+
+     display: flex;
+     justify-content: center;
+}
+.page-container{
+     width: 90vw;
+     display:flex;
+     flex-direction: column;
+     max-width: 1500px;
+
+}
+.full-screen-header{
+     height: 100vh;
+
+     display: flex;
+     flex-direction: column;
+}
+#nav-bar{
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+
+     padding: .8rem 1rem;
+}
+.t-logo{
+     display: none;
+}
+.talkative-logo{
+     background-color: hsl(0, 70%, 53%);
+     padding: .5em .9em;
+     border-radius: .3em;
+     width: 100px;
+     transition: all .4s;
+}
+.talkative-logo:hover{
+     background-color: hsl(0, 70%, 33%);
+}
+
+.link, .facebook-link{
+     background-color: hsl(0, 70%, 53%);
+     padding: .2em .6em;
+     border-radius: .3em;
+     color: white;
+     text-decoration: none;
+     font-size: 1.2rem;
+     transition: all .4s;
+}
+.facebook-link:hover{
+     background-color: hsl(0, 70%, 33%);
+}
+
+/*Header content(main)*/
+
+.header-section{
+     margin-top: 4rem;
+
+     display: flex;
+     flex-direction: column;
+}
+.main-header{
+     font-size: 4rem;
+     max-width: 710px;
+}
+.main-header > h1{
+     margin-top: 40px;
+     margin-bottom: 20px;
+}
+
+.description-text{
+     font-size: 1.5rem;
+     max-width: 710px;
+}
+ 
+.link-container{
+     margin-top: 35px;
+     width: fit-content;
+}
+
+.action-link{
+     font-size: 1.3rem;
+     padding: .3em .8em;
+}
+.action-link:hover{
+     background-color: hsl(0, 70%, 33%)
+}
+
+
+
+/* Advantages Section */
+
+.advantages-header{
+     padding-top: 45px;
+     margin-bottom: 80px;
+}
+
+.advantages-header > h2{
+     font-size: 1.5rem;
+}
+
+
+.advantages-container{
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+}
+.image-container{
+     max-width: 480px;
+     min-width: 420px;
+     height: 300px;
+}
+
+.first-image-container{
+     background-image: url(img/Big\ Shoes\ Having\ Fun.svg);
+     background-size: cover;
+}
+
+.second-image-container{
+     background-image: url(img/Big\ Shoes\ Chatting.svg);
+     background-size: cover;
+}
+
+.advantage-description{
+     max-width: 480px;
+     font-size: 1.5rem;
+}
+
+/* Last Topics Section */
+
+.last-topics-section{
+     margin-top: 100px;
+}
+.last-topics-box{
+     cursor: unset;
+     font-size: 1.5rem;
+}
+
+.topics-container{
+     margin-top: 50px;
+     max-width: 650px;
+}
+
+.topic{
+     max-width: 650px;
+     height: auto;
+     margin-bottom: 35px;
+
+     display: flex;
+     justify-content: left;
+     align-items: center;
+
+     background-color:rgb(220, 71, 71);
+     border-radius: .3em;
+}
+
+.topic-text{
+     color: white;
+     font-size: 1.3rem;
+     padding: .6em;
+}
+
+.topic-text:hover{
+     color: #e3e3e3;
+}
+
+
+
+/* Footer Section */
+
+footer{
+     padding-top: 60px;
+     padding-bottom: 10px;
+     display: flex;
+     justify-content: center;
+}
+footer > p > a{
+     text-decoration: none;
+     color: white;
+} 
+footer > p > a:hover{
+     color: #e3e3e3;
+}
+
+
+@media (max-width: 1080px) {
+     .first-advantage{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+     }
+     .second-advantage{
+          display: flex;
+          justify-content: space-between;
+          align-items: center;    
+     }
+     .advantage-description{
+          text-align: left;
+          max-width: 100%;
+          min-width: 350px;
+          margin-left: 15px;
+     }
+
+}
+
+@media (max-width: 873px){
+     .first-advantage{
+          width: 100vw;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;    
+          justify-content: left; 
+          padding-bottom: 30px;
+     }
+
+     .advantage-description{
+          text-align: left;
+          max-width: 650px;
+          min-width: 350px;
+          margin-left: 0px;
+     }
+
+     .second-advantage{
+          width: 100vw;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;    
+          justify-content: left;  
+          
+     }
+     .image-container{
+          min-width: 540px;
+          height: 380px;
+     }
+     
+     .first-image-container{
+          background-repeat: no-repeat;
+          background-size: contain;
+     }
+     
+     .second-image-container{
+          background-repeat: no-repeat;
+          background-size: contain;
+     }
+}
+
+@media (max-width: 774px){
+     .full-screen-header{
+          height: auto;
+          min-height: 100vh;
+     }
+}
+
+@media (max-width: 614px){
+          
+     .talkative-logo{
+          display: none;
+     }
+
+     .t-logo{
+          display: inline-block;
+          width: 32px;
+          background-color: hsl(0, 70%, 53%);
+          padding: .2em .6em;
+          border-radius: .3em;
+          transition: all .4s;
+     }
+          
+     .t-logo:hover{
+          background-color: hsl(0, 70%, 33%);
+     }
+
+ 
+     .header-section{
+          margin-top: 6vh;
+     }
+     
+     .advantages-header{
+          margin-top: 0px;
+     }
+
+     .first-advantage{
+          width: 100vw;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;    
+          justify-content: left;   
+          margin-bottom: 30px;
+
+     }
+
+     .advantage-description{
+          text-align: left;
+          max-width: 600px;
+          min-width: 280px;
+          margin-left: 0px;
+          text-align: justify;
+     }
+
+     .second-advantage{
+          width: 100vw;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;    
+          justify-content: left;  
+          
+     }
+          
+     .image-container{
+          width: 100%;
+          min-width: 280px;
+          height: 300px;
+     }
+          
+     .first-image-container{
+         background-size: 100% 100%;
+     }
+
+     .second-image-container{
+          background-size: 100% 100%;
+     }
+
+}
+
+@media (max-width: 427px){
+     .header-section{
+          margin-top: 3vh;
+     }
+     .main-header{
+          font-size: 3em;
+          max-width: 710px;
+     }
+     .description-text{
+          font-size: 1.3rem;
+          margin-top: 4vh;
+     }
+
+}
+
+@media (max-width: 320px){
+     .advantages-header{
+          margin-bottom: 30px;
+     }
+}

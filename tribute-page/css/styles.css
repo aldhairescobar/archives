@@ -1,0 +1,118 @@
+body {
+  background-color: #f7f7f7;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  text-align: center;
+}
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 3% auto;
+  display: grid;
+  background-color: #f7f7f7;
+  gap: 20px 0px;
+  grid-template-areas:
+    "header-image"
+    "header-text"
+    "content1"
+    "content2"
+    "footer";
+}
+
+/* Main header */
+
+#title {
+  font-size: 50px;
+  margin: 100px 20px 0px;
+  margin-bottom: 20px;
+}
+
+.summary {
+  margin: 10px 0px 0px;
+  text-align: justify;
+  padding: 0% 3%;
+  line-height: 1.5rem;
+}
+
+.header-text {
+  grid-area: header-text;
+  background-color: #eeeeee;
+}
+.header-image {
+  grid-area: header-image;
+  min-width: 350px;
+  min-height: 700px;
+  background-image: url("https://raw.githubusercontent.com/aldhairescobar/Tribute-Page-FCC-/master/img/eddie.png");
+  background-size: cover;
+  background-position: center;
+}
+
+/* Quote */
+
+.content1 {
+  grid-area: content1;
+  background-color: #929aab;
+  color: white;
+}
+
+.quote-eddie {
+  font-size: 1.2rem;
+  padding: 0% 3%;
+  line-height: 1.5rem;
+}
+
+/* main area */
+
+.content2 {
+  grid-area: content2;
+  background-color: #eeeeee;
+  padding: 3% 3% 5%;
+}
+
+#tribute-info {
+  font-size: 1.8rem;
+  margin-bottom: 4rem;
+}
+
+.main-paragraphs {
+  text-align: justify;
+  line-height: 1.5;
+}
+
+/* footer */
+
+.footer {
+  grid-area: footer;
+  background-color: #929aab;
+  color: white;
+}
+
+@media (min-width: 700px) {
+  /* Si tiene 700px o más (estos son los cambios) */
+  .container {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 700px;
+    grid-template-areas:
+      "header-text header-image"
+      "content1 content1"
+      "content2 content2"
+      "footer footer";
+  }
+}
+@media (max-width: 400px) {
+  /* Si tiene 400px o menos (estos son los cambios) */
+  .container {
+    width: 95%;
+  }
+}
+
+@media (max-width: 700px) {
+  /* Si tiene 700px o menos (estos son los cambios) */
+  #title {
+    margin-top: 35px;
+  }
+  .summary-bottom{
+       padding-bottom: 2.2rem;
+  }
+}
+

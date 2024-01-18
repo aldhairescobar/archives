@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="styles.css">
+     <title>JavaScript Documentation</title>
+</head>
+<body>
+     <nav id="navbar">
+          <header>
+               <h1 class="nav-title">JavaScript Basics</h1>
+          </header>
+          <ul>
+               <li class="list-item"><a class="nav-link" href="#javascript_introduction">JavaScript Introduction</a></li>
+               <li class="list-item"><a class="nav-link" href="#javascript_syntax">JavaScript Syntax</a></li>
+               <li class="list-item"><a class="nav-link" href="#javascript_comments">JavaScript Comments</a></li>
+               <li class="list-item"><a class="nav-link" href="#javascript_variables">JavaScript Variables</a></li>
+               <li class="list-item"><a class="nav-link" href="#javascript_data_types">JavaScript Data Types</a></li>
+               <li class="list-item"><a class="nav-link" href="#javascript_functions">JavaScript Functions</a></li>
+               <li class="list-item"><a class="nav-link" href="#javascript_arrays">JavaScript Arrays</a></li>
+               <li class="list-item"><a class="nav-link" href="#javascript_switch_statement">JavaScript Switch Statement</a></li>
+               <li class="list-item"><a class="nav-link" href="#javascript_for_loop">JavaScript For Loop</a></li>
+               <li class="list-item"><a class="nav-link" href="#javascript_while_loop">JavaScript While Loop</a></li>
+               <li class="list-item"><a class="nav-link" href="#reference">Reference</a></li>
+          </ul>
+     </nav>
+     <!--   Open and Close side bar button     -->
+     <img id="button" src="icon/icons8-menu.svg" alt=""> 
+     <!--   Open and Close side bar button Media Query    -->
+     <img id="button-query" src="icon/icons8-menu.svg" alt=""> 
+
+     <main id="main-doc" class="main">
+           <section class="main-section" id="javascript_introduction">
+               <header>
+                    <h2>JavaScript Introduction</h2>
+               </header>
+               <p>JavaScript is one of the 3 languages all web developers must learn:</p>
+               <ol>
+                    <li>HTML to define the content of web pages</li>
+                    <li>CSS to specify the layout of web pages</li>
+                    <li>JavaScript to program the behavior of web pages </li>
+               </ol>
+               <p>Web pages are not the only place where JavaScript is used. Many desktop and server programs use JavaScript. Node.js is the best known. Some databases, like MongoDB and CouchDB, also use JavaScript as their programming language.</p>
+          </section>
+          <section class="main-section" id="javascript_syntax">
+               <header>
+                    <h2>JavaScript Syntax</h2>
+               </header>
+               <p>JavaScript syntax is the set of rules, how JavaScript programs are constructed:</p>
+               <pre class="prettyprint">
+                    var x, y, z;       // How to declare variables
+                    x = 5; y = 6;      // How to assign values
+                    z = x + y;         // How to compute values
+               </pre>
+          </section>
+          <section class="main-section" id="javascript_comments">
+               <header>
+                    <h2>JavaScript Comments</h2>
+               </header>
+               <p>JavaScript comments can be used to explain JavaScript code, and to make it more readable.</p>
+               <p>JavaScript comments can also be used to prevent execution, when testing alternative code.</p>
+               <h3>Single Line Comments</h3>
+               <p>Single line comments start with //.</p>
+               <p>Any text between<code> //</code> and the end of the line will be ignored by JavaScript (will not be executed).</p>
+               <p>This example uses a single-line comment before each code line:</p>
+               <pre class="prettyprint">
+                    // Change heading:
+                    document.getElementById("myH").innerHTML = "My First Page";
+                    // Change paragraph:
+                    document.getElementById("myP").innerHTML = "My first paragraph.";
+               </pre>
+               <h2>Multi-line Comments</h2>
+               <p>Multi-line comments start with <code>/*</code> and end with <code>*/</code>.</p>
+               <p>Any text between <code>/*</code> and <code>*/</code> will be ignored by JavaScript.</p>
+               <p>This example uses a multi-line comment (a comment block) to explain the code:</p>
+               <pre class="prettyprint">
+                    /*
+                    The code below will change
+                    the heading with id = "myH"
+                    and the paragraph with id = "myP"
+                    in my web page:
+                    */
+               </pre>
+          </section>
+          <section class="main-section" id="javascript_variables">
+               <header>
+                    <h2>JavaScript Variables</h2>
+               </header>
+               <p>JavaScript variables are containers for storing data values.</p>
+               <p>In this example, <code>x</code>, <code>y</code>, and <code>z</code>, are variables:</p>
+               <pre class="prettyprint">
+                    Example
+                    var x = 5;
+                    var y = 6;
+                    var z = x + y;
+               </pre>
+          </section>
+          <section class="main-section" id="javascript_data_types">
+               <header>
+                    <h2>JavaScript Data Types</h2>
+               </header>
+               <p>JavaScript variables can hold many data types: numbers, strings, objects and more:</p>
+               <pre class="prettyprint">
+                    var length = 16;                               // Number
+                    var lastName = "Johnson";                      // String
+                    var x = {firstName:"John", lastName:"Doe"};    // Object 
+               </pre>
+               <h3>The Concept of Data Types</h3>
+               <p>In programming, data types is an important concept.</p>
+               <p>To be able to operate on variables, it is important to know something about the type.</p>
+          </section>
+          <section class="main-section" id="javascript_functions">
+               <header>
+                    <h2>JavaScript Functions</h2>
+               </header>
+               <p>A JavaScript function is a block of code designed to perform a particular task.</p>
+               <p>A JavaScript function is executed when "something" invokes it (calls it).</p>
+               <pre class="prettyprint">
+                    Example
+                    function myFunction(p1, p2) {
+                    return p1 * p2;   // The function returns the product of p1 and p2
+                    }
+               </pre>
+               <h3>JavaScript Function Syntax</h3>
+               <p>A JavaScript function is defined with the <code>function</code> keyword, followed by a name, followed by parentheses <code>()</code>.</p>
+               <p>Function names can contain letters, digits, underscores, and dollar signs (same rules as variables).</p>
+               <p>The parentheses may include parameter names separated by commas:
+               <code>(parameter1, parameter2, ...)</code></p>
+               <p>The code to be executed, by the function, is placed inside curly brackets: <code>{}</code></p>
+               <pre class="prettyprint">
+                    function name(parameter1, parameter2, parameter3) {
+                         // code to be executed
+                       }                        
+               </pre>
+               <p>Function parameters are listed inside the parentheses <code>()</code> in the function definition.</p>
+               <p>Function arguments are the values received by the function when it is invoked.</p>
+               <p>Inside the function, the arguments (the parameters) behave as local variables.</p>
+          </section>
+          <section class="main-section" id="javascript_arrays">
+               <header>
+                    <h2>JavaScript Arrays</h2>
+               </header>
+               <p>JavaScript arrays are used to store multiple values in a single variable.</p>
+               <pre class="prettyprint">
+                    Example
+                    var cars = ["Saab", "Volvo", "BMW"]; 
+               </pre>
+               <h3>What is an Array?</h3>
+               <p>An array is a special variable, which can hold more than one value at a time.</p>
+               <p>If you have a list of items (a list of car names, for example), storing the cars in single variables could look like this:</p>
+               <pre class="prettyprint">
+                    var car1 = "Saab";
+                    var car2 = "Volvo";
+                    var car3 = "BMW"; 
+               </pre>
+               <p>However, what if you want to loop through the cars and find a specific one? And what if you had not 3 cars, but 300?</p>
+               <p>The solution is an array!</p>
+               <p>An array can hold many values under a single name, and you can access the values by referring to an index number.</p>
+               <h3>Creating an Array</h3>
+               <p>Using an array literal is the easiest way to create a JavaScript Array.</p>
+               <pre class="prettyprint">
+                    Syntax: 
+                    var array_name = [item1, item2, ...];       
+                    Example
+                    var cars = ["Saab", "Volvo", "BMW"];
+               </pre>
+          </section>
+          <section class="main-section" id="javascript_switch_statement">
+               <header>
+                    <h2>JavaScript Switch Statement</h2>
+               </header>
+               <p>The switch statement is used to perform different actions based on different conditions.</p>
+               <h3>The JavaScript Switch Statement</h3>
+               <p>Use the <code>switch</code> statement to select one of many code blocks to be executed.</p>
+               <pre class="prettyprint">
+                    Syntax
+                    switch(expression) {
+                    case x:
+                    // code block
+                    break;
+                    case y:
+                    // code block
+                    break;
+                    default:
+                    // code block
+                    } 
+               </pre>
+               <p>This is how it works:</p>
+               <ul>
+                    <li>The switch expression is evaluated once.</li>
+                    <li>The value of the expression is compared with the values of each case.</li>
+                    <li>If there is a match, the associated block of code is executed.</li>
+                    <li>If there is no match, the default code block is executed.</li>
+               </ul>
+               <p>Example</p>
+               <p>The <code>getDay()</code> method returns the weekday as a number between 0 and 6.</p>
+               <p><code>(Sunday=0, Monday=1, Tuesday=2 ..)</code></p>
+               <p>This example uses the weekday number to calculate the weekday name:</p>
+               <pre class="prettyprint">
+                    switch (new Date().getDay()) {
+                         case 0:
+                           day = "Sunday";
+                           break;
+                         case 1:
+                           day = "Monday";
+                           break;
+                         case 2:
+                            day = "Tuesday";
+                           break;
+                         case 3:
+                           day = "Wednesday";
+                           break;
+                         case 4:
+                           day = "Thursday";
+                           break;
+                         case 5:
+                           day = "Friday";
+                           break;
+                         case 6:
+                           day = "Saturday";
+                       }                        
+               </pre>
+          </section>
+          <section class="main-section" id="javascript_for_loop">
+               <header>
+                    <h2>JavaScript For Loop</h2>
+               </header>
+               <p>Loops can execute a block of code a number of times.</p>
+               <h3>JavaScript Loops</h3>
+               <p>Loops are handy, if you want to run the same code over and over again, each time with a different value.</p>
+               <p>Often this is the case when working with arrays:</p>
+               </section>
+               <pre class="prettyprint">
+                    Instead of writing:
+                    text += cars[0] + "br"; 
+                    text += cars[1] + "br"; 
+                    text += cars[2] + "br"; 
+                    text += cars[3] + "br"; 
+                    text += cars[4] + "br"; 
+                    text += cars[5] + "br; 
+                    You can write:
+                    var i;
+                    for (i = 0; i < cars.length; i++) { 
+                    text += cars[i] + "br";
+                    }
+               </pre>
+          <section class="main-section" id="javascript_while_loop">
+               <header>
+                    <h2>JavaScript While Loop</h2>
+               </header>
+               <p>Loops can execute a block of code as long as a specified condition is true.</p>
+               <h3>The While Loop</h3>
+               <p>The while loop loops through a block of code as long as a specified condition is true.</p>
+               <pre class="prettyprint">
+                    Syntax
+                    while (condition) {
+                    // code block to be executed
+                    }
+               </pre>
+               <p>In the following example, the code in the loop will run, over and over again, as long as a variable <code>(i)</code> is less than <code>10</code>:</p>
+               <pre class="prettyprint">
+                    Example
+                    while (i < 10) {
+                    text += "The number is " + i;
+                    i++;
+                    }
+               </pre>
+          </section>
+          <section class="main-section" id="reference">
+               <header>
+                    <h2>Reference</h2>
+               </header>
+               <p>All the documentation in this page is taken from <a class="reference" href="https://www.w3schools.com/" target="_blank"> w3schools</a>.</p>
+          </section>
+     </main>
+     
+     <script src="index.js"></script>
+     <script src="https://cdn.jsdelivr.net/gh/google/code-prettify@master/loader/run_prettify.js"></script>
+     </body>
+</html>

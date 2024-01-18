@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="css/styles.css">
+     <script src="https://kit.fontawesome.com/71c7ccb561.js" crossorigin="anonymous"></script>
+     <title>Survey Form</title>
+</head>
+<body>
+     <div class="form-section">
+          <div class="container">
+            <section class="header">
+              <i class="fas fa-frown icon-sad fa-5x"></i>
+              <h1 id="title">We're really sorry</h1>
+            </section>
+              <form id="survey-form">
+               <fieldset class="field"><legend>
+                <h2 class="text-title" id="description">Tell us what went wrong</h2></legend>
+                <div class="radio-options">
+                  <label for="customer">
+                  <input id="customer" type="radio" name="whatsWrong" value="customerservice" checked> Customer Service
+                  </label>
+                </div>
+                <div class="radio-options">
+                  <label for="quality">
+                    <input id="quality" type="radio" name="whatsWrong" value="quality"> Quality
+                  </label>
+                </div>
+                <div class="radio-options">
+                  <label for="environment">
+                  <input id="environment" type="radio" name="Whatswrong" value="environment"> Environment
+                  </label>
+                </div>
+                <div class="radio-options">
+                  <label for="wait">
+                    <input id="wait" type="radio" name="Whatswrong" value="waittime"> Wait Time
+                  </label>
+                </div>
+                <div class="radio-options">
+                  <label for="other">
+                  <input id="other" type="radio" name="Whatswrong" value="other"> Other
+                  </label>
+                </div>
+                <textarea class="text-area" placeholder="What went wrong? How can we do better?" rows="4" cols="40"></textarea>
+               </fieldset>
+
+               <div class="second-section">
+                <fieldset class="field">    
+                <legend>
+                <h2 class="text-title">Allow us to reply</h2>
+                </legend>
+                <div class="input-text">
+                  <label id="name-label" for="name">Name</label>
+                  <input id="name" type="text" placeholder="Enter your name" required>
+                </div>
+                <div class="input-text">
+                  <label id="email-label" for="email">Email
+                  <input id="email" type="email" placeholder="Enter your email" required>
+                  </label>
+                </div>
+
+                <div class="input-text">
+                  <label id="number-label" for="number">Age
+                  <input id="number" type="number" name="age" placeholder="Age" min="10" max="99" required>
+                  </label>
+                </div>
+                <div>
+                  <label for="dropdown">Gender: </label>
+                  <select name="gender" id="dropdown">
+                    <option value="">Male</option>
+                    <option value="">Female</option>
+                    <option value="">Alien</option>
+                  </select>
+                </div>
+
+                <fieldset class="field bottom-field">
+                <legend>Came to know about us from</legend>
+                <div class="check-bottoms">
+                  <span>
+                    <input type="checkbox" id="web" value="web">
+                    <label for="web">Website</label>
+                  </span>
+                  <span>
+                    <input type="checkbox" id="media" value="social">
+                    <label for="media">Social Media</label>
+                  </span>
+                  <span>
+                    <input type="checkbox" id="friends" value="friends">
+                    <label for="friends">Friends</label>
+                  </span>
+                </div>
+                </fieldset>
+               </fieldset>
+               <div class="submit-button">
+                 <button id="submit" class="button" type="submit">Submit</button>
+               </div>
+               </div>
+               </form>
+          </div>
+     </div>
+</body>
+</html>

@@ -1,0 +1,285 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: hsl(210, 46%, 95%);
+  font-family: "Manrope", sans-serif;
+}
+
+#main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.article-container {
+  background-color: white;
+  width: 620px;
+  height: 240px;
+  border-radius: 0.5em;
+  overflow: visible;
+  display: flex;
+}
+
+@media (max-width: 830px) {
+  .article-container {
+    width: 290px;
+    height: 480px;
+    flex-direction: column;
+    overflow: hidden;
+  }
+}
+
+.image-container {
+  flex-basis: 43%;
+  overflow: hidden;
+}
+.image {
+  max-height: 100%;
+}
+
+@media (max-width: 830px) {
+  .image-container {
+    flex-basis: auto;
+    overflow: hidden;
+  }
+  .image {
+    max-width: 100%;
+    max-height: 100%;
+    width: max-content;
+    object-position: left;
+  }
+}
+
+.information-container {
+  flex-basis: 57%;
+  flex-direction: column;
+  padding: 1.6em;
+}
+
+@media (max-width: 830px) {
+  .information-container {
+    padding: 1.6em 1.6em 1em;
+  }
+}
+
+.header-text {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 700;
+  color: hsl(217, 19%, 35%);
+}
+.paragraph {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: hsl(214, 17%, 51%);
+}
+
+.profile-banner {
+  display: flex;
+  justify-content: space-between;
+  height: 33px;
+}
+@media (max-width: 830px) {
+  .profile-banner {
+    margin-top: 30px;
+  }
+}
+.avatar-information {
+  min-width: 140px;
+  display: flex;
+  justify-content: space-between;
+}
+.image-avatar-container {
+  width: 33px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.image-avatar {
+  max-width: 100%;
+}
+.info-avatar {
+  font-size: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.info-avatar > p {
+  margin: 0;
+}
+.info-avatar > p:first-child {
+  font-weight: 700;
+  color: hsl(217, 19%, 35%);
+}
+.info-avatar > p:last-child {
+  font-weight: 500;
+  color: hsl(214, 17%, 51%);
+}
+
+.share-section {
+  position: relative;
+}
+
+.share-section.open .tooltip {
+  opacity: 1;
+  z-index: 1;
+}
+
+.share-section-btn {
+  background: #eaf1fb;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  transition: background-color 0.5s;
+}
+
+.share-section-btn > svg {
+  fill: #6e8098;
+  transition: fill 0.5s;
+}
+
+.share-section-btn:hover {
+  background-color: #6e8098;
+}
+
+.share-section-btn:hover > svg {
+  fill: #fff;
+}
+
+.tooltip {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: translateX(-50%);
+  left: 50%;
+  top: -80px;
+  padding: 17px 39px;
+  background-color: #48556a;
+  z-index: 1;
+  opacity: 0;
+  border-radius: 10px;
+  transition: opacity 0.5s;
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-50%, 100%);
+  display: block;
+  border: 15px solid #48556a;
+  border-left-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+}
+
+.tooltip-text {
+  text-transform: uppercase;
+  font-size: 13px;
+  margin-right: 24px;
+  letter-spacing: 4px;
+  color: white;
+}
+
+.tooltip-link {
+  width: 20px;
+  height: 20px;
+  margin-left: 16px;
+}
+
+.tooltip-link:first-of-type {
+  margin-left: 0;
+}
+
+.tooltip-link--fb {
+  background: url("../images/icon-facebook.svg") no-repeat center;
+}
+
+.tooltip-link--tw {
+  background: url("../images/icon-twitter.svg") no-repeat center;
+}
+
+.tooltip-link--pin {
+  background: url("../images/icon-pinterest.svg") no-repeat center;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 830px) {
+  .share-section {
+    position: relative;
+  }
+
+  .share-section.open .tooltip {
+    opacity: 1;
+    z-index: 1;
+  }
+
+  .share-section-btn {
+    background: #eaf1fb;
+    position: relative;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    transition: background-color 0.5s;
+    z-index: 10;
+  }
+
+  .share-section-btn > svg {
+    fill: #6e8098;
+    transition: fill 0.5s;
+  }
+
+  .share-section-btn:focus {
+    background-color: #6e8098;
+  }
+
+  .share-section-btn:focus > svg {
+    fill: #fff;
+  }
+
+  .tooltip {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transform: translateX(0%);
+    left: -790%;
+    top: -5px;
+    padding: 0.8em 6em 1.5em 3em;
+    background-color: #48556a;
+    z-index: 1;
+    opacity: 0;
+    border-radius: 10px;
+    transition: opacity 0.5s;
+  }
+  .tooltip-text {
+    text-transform: uppercase;
+    font-size: 13px;
+    margin-right: 24px;
+    letter-spacing: 4px;
+    color: white;
+  }
+
+  .tooltip-link {
+    width: 20px;
+    height: 20px;
+    margin-left: 16px;
+  }
+}

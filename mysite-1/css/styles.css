@@ -1,0 +1,138 @@
+:root {
+  --color1: #66bfbf;
+  --color2: #11999e;
+}
+body {
+  margin: 0;
+  text-align: center;
+  font-family: "Merriweather", serif;
+  color: #40514e;
+}
+h1 {
+  font-size: 5.625rem;
+  margin: 50px auto 0px auto;
+  font-family: "Sacramento", cursive;
+  color: var(--color1);
+  line-height: 2;
+}
+h2 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  color: var(--color1);
+  font-weight: normal;
+  padding-bottom: 10px;
+}
+h3 {
+  font-family: "Montserrat", sans-serif;
+  color: var(--color2);
+}
+p {
+  line-height: 2;
+}
+.top-container {
+  background-color: #eaf6f6;
+  position: relative;
+  padding-top: 100px;
+}
+.img-profile {
+  width: 20%;
+  margin: auto;
+}
+.intro {
+  width: 35%;
+  margin: auto;
+}
+.middle-container {
+  margin: 100px 0px 100px 0px;
+}
+hr {
+  border: dotted #eaf6f6 6px;
+  border-bottom: none;
+  width: 4%;
+  margin: 100px auto;
+}
+.bottom-container {
+  color: var(--color2);
+  background-color: var(--color1);
+  padding: 50px 0px 20px;
+}
+.top-cloud {
+  position: absolute;
+  right: 300px;
+  top: 40px;
+}
+.bottom-cloud {
+  position: absolute;
+  left: 250px;
+  bottom: 300px;
+}
+.footer-link {
+  color: var(--color2);
+  margin: 10px 20px;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+}
+.footer-link:hover{
+     color: #eaf6f6
+}
+/* .top-container > h2{
+     font-weight: normal;
+} */
+.skill-row {
+  display: block;
+  width: 50%;
+  margin: 100px auto 100px auto;
+  text-align: left;
+}
+/* .skill-row > img{
+     width: 25%;
+} */
+.check-img {
+  width: 25%;
+  float: left;
+  margin-right: 30px;
+}
+.promo-img {
+  width: 25%;
+  float: right;
+  margin-left: 30px;
+}
+.copy {
+  color: #eaf6f6;
+  font-size: 0.75rem;
+  padding: 20px 0px;
+}
+.contact-message {
+  width: 40%;
+  margin: 40px auto 60px;
+}
+.BUTTON_ZLT {
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 8px;
+  color: #eaf6f6;
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+  padding: 15px;
+  background-color: #66bfbf;
+/*   box-shadow: 1px 1px 20px 0px #000000;
+  -webkit-box-shadow: 1px 1px 20px 0px #000000;
+  -moz-box-shadow: 1px 1px 20px 0px #000000;
+  text-shadow: 1px 1px 20px #000000; */
+/*   border: solid #337fed 1px; */
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  text-align: center;
+}
+.BUTTON_ZLT:hover{
+background-color: #11999E;
+}
+
+
+.img-mountain{
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}

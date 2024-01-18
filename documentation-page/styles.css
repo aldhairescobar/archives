@@ -1,0 +1,144 @@
+*{
+     box-sizing: border-box;
+     font-family: sans-serif;
+     font-weight: 300;
+     line-height: 1.5;
+     color: #323330;
+     scroll-behavior: smooth;
+}
+body{
+     margin: 0;
+}
+
+/* Side bar  */
+
+#navbar{
+     width: 300px;
+     position: fixed;
+     height: 100%;
+     transition: 0.5s;
+     overflow: auto;
+     z-index: 2;
+     background-color: #FFF;
+     border-right: 1px solid #323330;
+}
+
+#navbar ul{
+     padding: 0;
+     margin: 0;
+}
+
+.nav-title{
+     font-size: 1.2rem;
+     padding: 1rem;
+     text-align: center;
+     background-color: #F0DB4F;
+     color: #323330;
+     margin: 0;
+     font-weight: 600;
+}
+.list-item{
+     list-style: none;
+     background-color: #fcfcfc;
+     border-bottom:  1px dotted #f2f2f2;
+}
+.list-item:hover{     
+     background-color: #f2f2f2;
+}
+.nav-link{       
+     display: block;
+     width: 100%;
+     text-decoration: none;
+     color: #323330;
+     padding: 1rem;
+
+}
+
+/* Main Document */
+
+#main-doc{
+     position: absolute;
+     top: 0;
+     right: 0;
+     bottom: 0;
+     left: 300px;
+     max-width: 82%;
+     margin: 0 auto;
+     text-align: justify;
+     transition: left .5s;
+     padding: 20px;
+}
+
+/* Sections */
+
+h2{
+     font-size: 2rem;
+     font-weight: 600;
+}
+
+code{
+     background-color: #f2f2f2;
+}
+pre{
+     background-color: #f2f2f2;
+     text-align: left;
+     white-space: pre-line;
+     width: 60%;
+     overflow: auto;
+     border: none !important;
+}
+#reference{
+     padding-bottom: 20px;
+}
+.reference:hover, .reference:focus{
+     color: #0af;
+}
+
+
+/* Buttons side bar Open Close */
+
+/* Button Open close */
+#button{
+     display: block;
+     position: fixed;
+     z-index: 5;
+     bottom: 20px;
+     left: 10px;
+     width: 30px;
+     cursor: pointer;
+}
+#button:hover{
+     opacity: 0.4;
+}
+
+/*  Button Open Close After Media Query  */
+
+#button-query{
+     display: none;
+     position: fixed;
+     z-index: 5;
+     bottom: 20px;
+     left: 10px;
+     width: 30px;
+     cursor: pointer;
+}
+#button-query:hover{
+     opacity: 0.4;
+}
+
+
+@media(max-width: 730px){
+     #button{
+          display: none;
+     }
+     #button-query{
+          display: block;
+     }
+     #navbar{
+          width: 0px;
+      }
+     #main-doc{
+          left: 0px;
+          max-width: 95%;
+     }          
+}
