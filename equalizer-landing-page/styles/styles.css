@@ -1,0 +1,343 @@
+*{ box-sizing: border-box; }
+
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1rem;
+    line-height: 1.625rem;
+    font-weight: 400;
+    margin: 0;
+    background-color: #FCFAF9;
+    color: #191826;
+}
+
+/* ==================
+    General styles
+===================== */
+
+img {
+    max-width: 100%;
+}
+
+.logo,
+.footer-logo {
+    display: block;
+}
+
+/* ==================
+    Typography
+===================== */
+
+h1,
+h2 {
+    font-weight: 700;
+    margin-top: 0;
+}
+
+.hero-title {
+    font-size: 2.5rem;
+    line-height: 3rem;
+    margin-bottom: 1.25rem;
+}
+
+.subtitle {
+    margin-bottom: 10.375rem;
+}
+
+.info-card-title {
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.info-card-description {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    margin-bottom: 2.25rem;
+}
+
+.info-card-pricing {
+    font-size: 1.25rem;
+    line-height: 1.375rem;
+}
+
+.info-price {
+    font-size: 4.06rem;
+    line-height: 3.25rem;
+    font-weight: 700;
+    margin-right: 16px;
+}
+
+.footer-text {
+    margin: 0;
+}
+
+.footer-email {
+    font-weight: 700;
+    color: #191826;
+    text-decoration: none;
+}
+
+/* buttons */
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 296px;
+    padding: 0.875em 0;
+    border-radius: 12px;
+    color: #FCFAF9;
+    font-size: 1.125rem;
+    line-height: 2rem;
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #191826;
+    margin-bottom: 1rem;
+}
+
+.btn-secondary {
+    background-color: #FCFAF9;
+    color: #191826;
+}
+
+.apple-icon,
+.android-icon {
+    margin-right: 8px;
+}
+
+/* ==================
+    General layout
+===================== */
+
+.main-grid {
+    display: grid;
+    grid-template-columns: minmax(1.5rem, 1fr) minmax(0px, 500px) minmax(1.5rem, 1fr);
+}
+
+
+/* ==================
+    Layout
+===================== */
+
+.hero-illustration {
+    display: none;
+}
+
+/* change name - - - - - - */
+.patterns {
+    background-image: url(../assets/bg-main-mobile.png);
+    background-repeat: no-repeat;
+    background-position-y: -250px;
+    background-position-x: 10px;
+}
+
+.header {
+    margin: 2.5rem 0 4rem 0;
+}
+
+.header,
+.hero,
+.footer-main,
+.social-list {
+    grid-column: 2 / -2;
+}
+
+.info {
+    display: inline-block;
+    border-radius: 12px;
+    background-image: url(../assets/bg-pattern-2.svg);
+    background-size: 280px;
+    background-repeat: no-repeat;
+    background-position: top;
+    background-color: black;
+    height: 600px;
+}
+
+.illustration-app {
+    display: block;
+    width: 209px;
+    margin: 0 auto;
+    transform: translateY(-6.125rem);
+}
+
+.info-card {
+    color: #FCFAF9;
+    border-radius: 12px;
+    background-color: #FA7453;
+    padding: 3rem 2.25rem;
+    transform: translateY(-3rem);
+}
+
+.info-card-pricing {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+/* == Footer == */
+
+.footer {
+    margin-top: 5.5rem;
+    margin-bottom: 5rem;
+}
+
+.footer-main {
+    margin-bottom: 4rem;
+}
+
+.footer-logo {
+    margin-bottom: 2rem;
+}
+
+.footer-br {
+    display: none;
+}
+
+.social-list {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    align-items: center;
+    width: 100px;
+    justify-content: space-between;
+}
+
+.social-item {
+
+}
+
+.social-link {
+
+}
+
+.social-icon {
+    display: block;
+}
+
+.social-icon:hover > path,
+.social-icon:focus > path{
+    fill: #FA7453;
+}
+
+
+@media (min-width: 768px) {
+
+    .hero-illustration {
+        display: block;
+        position: absolute;
+        width: 267px;
+        right: -36px;
+        top: -32px;
+    }
+
+    .header {
+        margin: 3.875rem 0 5.9375rem;
+    }
+
+    /* change name - - - - - - */
+    .patterns {
+        background-image: url(../assets/bg-main-tablet.png);
+        background-repeat: no-repeat;
+        background-position-y: -300px;
+        background-position-x: -380px;
+    }
+
+    .main-grid {
+        grid-template-columns: minmax(2.5rem, 1fr) repeat(4, minmax(120px, 171px)) minmax(2.5rem, 1fr);
+    }
+    
+    .hero {
+        grid-column: 2 / span 3;
+    }
+
+    .hero-title {
+        font-size: 4rem;
+        line-height: 4rem;
+        margin-bottom: 1.75rem;
+    }
+
+    .subtitle {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+        margin-bottom: 15.625rem;
+    }
+
+    .footer {
+        margin-top: 11.4375rem;
+    }
+
+    .footer-main {
+        grid-column: 2 / span 3;
+    }
+
+    .social-list {
+        grid-column: 5 / span 1;
+        justify-self: flex-end;
+    }
+    
+    .footer-main {
+        margin-bottom: 0;
+    }
+
+    .footer-br {
+        display: block;
+    }
+
+    .info {
+        display: inline-block;
+        border-radius: 12px;
+        background-image: url(../assets/bg-pattern-2.svg);
+        background-size: 280px;
+        background-repeat: no-repeat;
+        background-position: top;
+        background-position-y: -30px;
+        background-position-x: 229px;
+        height: 600px;
+    }
+
+    .info {
+        display: flex;
+        flex-direction: column;
+        max-width: 696px;
+        margin: 0 auto;
+        background-position-y: -30px;
+    }
+
+    .illustration-app {
+        margin: 0 auto 0 64px;
+        width: 270px;
+        transform: translateY(-8.75rem);
+    }
+
+    .info-card {
+        max-width: 400px;
+        margin-left: auto;
+        margin-right: 58px;
+        transform: translateY(-25.5rem);
+    }
+}
+
+@media (min-width: 1440px){
+
+
+    /* change name - - - - - - */
+    .patterns {
+        background-image: url(../assets/bg-main-desktop.png);
+        background-repeat: no-repeat;
+        background-position-y: -260px;
+        background-position-x: -260px;
+    }
+
+    .main-grid {
+        grid-template-columns: minmax(2.5rem, 1fr) repeat(4, minmax(260px, 260px)) minmax(2.5rem, 1fr);
+    }
+
+
+}
